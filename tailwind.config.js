@@ -4,6 +4,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ["Poppins", "sans-serif"],
+				"arial": ["Arial", "sans-serif"],
 			},
 			colors: {
 				"blue-light": "hsl(203, 97%, 87%)",

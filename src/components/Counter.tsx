@@ -2,7 +2,7 @@ import React from "react"
 
 const Counter = () => {
 	return (
-		<div className="grid grid-cols-2 gap-x-2 justify-items-center bg-blue-light rounded-lg shadow-lg shadow-blue-light/75 h-2/5 py-4 px-3 mx-6 mt-12">
+		<div className="grid grid-cols-2 gap-x-2 justify-items-center bg-blue-light rounded-lg shadow-lg shadow-blue-light/75 h-2/5 py-4 px-3 mx-6">
 			<div className="text-center">
 				<p className="font-bold text-5xl">42</p>
 				<p className="font-semibold text-2xl">Words</p>
