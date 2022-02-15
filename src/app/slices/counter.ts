@@ -16,7 +16,7 @@ export const CounterSlice = createSlice({
 	initialState,
 	reducers: {
 		updateWordCount: (state, action: PayloadAction<string>) => {
-			let wordArray: string[] = action.payload
+			let wordArray= action.payload
 				.replace(/\n/g, " ")
 				.split(" ")
 				.filter((i) => i !== "")
@@ -24,7 +24,7 @@ export const CounterSlice = createSlice({
 			state.wordCount = wordArray.length
 		},
 		updateCharCount: (state, action: PayloadAction<string>) => {
-			let charArray: string[] = action.payload
+			let charArray= action.payload
 				.replace(/\n/g, "")
 				.split("")
 				.filter((i) => i !== "")

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react"
 
 const Topbar = () => {
-  return (
-	<div>Topbar</div>
-  )
+	return (
+		<>
+			<header className="flex justify-center rounded-lg bg-blue-light shadow-lg shadow-blue-light/70 font-bold text-3xl p-4 m-3.5 lg:text-4xl lg:p-5 lg:m-4">
+				Word Counter
+			</header>
+		</>
+	)
 }
 
 export default Topbar
