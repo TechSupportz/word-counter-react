@@ -6,17 +6,15 @@ interface CounterState {
 	charCount: number
 }
 
-const initialState: CounterState = {
-	wordCount: 0,
-	charCount: 0,
-}
-
 export const CounterSlice = createSlice({
 	name: "counter",
-	initialState,
+	initialState: {
+		wordCount: 0,
+		charCount: 0,
+	} as CounterState,
 	reducers: {
 		updateWordCount: (state, action: PayloadAction<string>) => {
-			let wordArray= action.payload
+			let wordArray = action.payload
 				.replace(/\n/g, " ")
 				.split(" ")
 				.filter((i) => i !== "")
@@ -24,7 +22,7 @@ export const CounterSlice = createSlice({
 			state.wordCount = wordArray.length
 		},
 		updateCharCount: (state, action: PayloadAction<string>) => {
-			let charArray= action.payload
+			let charArray = action.payload
 				.replace(/\n/g, "")
 				.split("")
 				.filter((i) => i !== "")

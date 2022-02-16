@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react"
+import { updateWordCount } from "../app/slices/counter"
+import { updateCharCount } from "../app/slices/counter"
+import { useAppDispatch } from "../hooks/useAppDispatch"
 
 const TextInput = () => {
+	const dispatch = useAppDispatch()
+
 	const [input, setInput] = useState("")
 
 	useEffect(() => {
-		console.log(input)
-		
+		dispatch(updateWordCount(input))
+		dispatch(updateCharCount(input))
 	}, [input])
 
 	return (

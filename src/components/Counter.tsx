@@ -1,14 +1,20 @@
-import React from "react"
+import { useState, useEffect } from "react"
+import { CounterSlice } from "../app/slices/counter"
+import { useAppDispatch } from "../hooks/useAppDispatch"
+import { useAppSelector } from "../hooks/useAppSelector"
 
 const Counter = () => {
+	const wordCount = useAppSelector(state => state.counter.wordCount)
+	const charCount = useAppSelector(state => state.counter.charCount)
+
 	return (
-		<div className="grid grid-cols-2 gap-x-2 justify-items-center bg-blue-light rounded-lg shadow-lg shadow-blue-light/75 h-2/5 py-4 px-3 mx-6">
+		<div className="grid grid-cols-2 gap-x-2 justify-items-center bg-blue-light rounded-lg shadow-lg shadow-blue-light/75 h-2/5 py-5 px-3 mx-6">
 			<div className="text-center">
-				<p className="font-bold text-5xl">42</p>
+				<p className="font-bold text-5xl">{wordCount}</p>
 				<p className="font-semibold text-2xl">Words</p>
 			</div>
 			<div className="text-center">
-				<p className="font-bold text-5xl">420</p>
+				<p className="font-bold text-5xl">{charCount}</p>
 				<p className="font-semibold text-2xl">Chars</p>
 			</div>
 			<p className="justify-self-start font-bold text-xl underline my-3.5">Options</p>
