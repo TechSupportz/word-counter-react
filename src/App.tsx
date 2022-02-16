@@ -8,7 +8,7 @@ const App = () => {
 	return (
 		<>
 			<Topbar />
-			<div className="grid h-[70vh] lg:grid-cols-6 lg:grid-rows-5 lg:gap-y-8 mt-10">
+			<div className="grid h-[70vh] lg:grid-cols-6 lg:grid-rows-5 lg:gap-y-8 mt-10 lg:mt-16">
 				<div className="lg:col-span-2 lg:row-span-3 h-full">
 					<Counter />
 				</div>
