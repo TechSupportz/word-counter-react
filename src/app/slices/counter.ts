@@ -15,7 +15,7 @@ export const CounterSlice = createSlice({
 		wordCount: 0,
 		charCount: 0,
 		ignoreCitation: false,
-		autoSave: false,
+		autoSave: localStorage.getItem("autoSave") ? localStorage.getItem("autoSave")==="true" ? true : false : false,
 	} as CounterState,
 	reducers: {
 		updateWordCount: (state, action: PayloadAction<string>) => {
