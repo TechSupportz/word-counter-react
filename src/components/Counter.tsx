@@ -7,6 +7,7 @@ import Options from "./Options"
 const Counter = () => {
 	const wordCount = useAppSelector((state) => state.counter.wordCount)
 	const charCount = useAppSelector((state) => state.counter.charCount)
+	
 
 	return (
 		<div className="grid grid-cols-2 gap-x-2 justify-items-center bg-blue-light dark:bg-blue-dark rounded-lg shadow-lg shadow-blue-light/60 dark:shadow-blue-dark/50 h-2/5 py-5 px-3 mx-6">

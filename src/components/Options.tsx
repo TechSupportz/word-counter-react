@@ -1,6 +1,7 @@
 import { useAppSelector } from "../hooks/useAppSelector"
 import { useAppDispatch } from "../hooks/useAppDispatch"
 import { toggleIgnoreCitation, toggleAutoSave } from "../app/slices/counter"
+import { useEffect } from "react"
 
 
 const Options = () => {
@@ -9,6 +10,9 @@ const Options = () => {
 	const ignoreCitation = useAppSelector((state) => state.counter.ignoreCitation)
 	const autoSave = useAppSelector((state) => state.counter.autoSave)
 
+	useEffect(() => {
+		localStorage.getItem("autoSave") === "true" && dispatch(toggleAutoSave())
+	},[])
 
   return (
 		<>

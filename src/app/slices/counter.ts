@@ -43,6 +43,7 @@ export const CounterSlice = createSlice({
 		},
 		toggleAutoSave: (state) => {
 			state.autoSave = !state.autoSave
+			localStorage.setItem("autoSave", state.autoSave ? "true" : "false")
 		},
 	},
 })

@@ -9,11 +9,21 @@ const TextInput = () => {
 
 	const [input, setInput] = useState("")
 	const ignoreCitation = useAppSelector((state) => state.counter.ignoreCitation)
+	const autoSave = useAppSelector((state) => state.counter.autoSave)
+
+	useEffect(() => {
+		setInput(localStorage.getItem("input") || "")
+		localStorage.setItem("input", input)
+	}, [])
 
 	useEffect(() => {
 		dispatch(updateWordCount(input))
 		dispatch(updateCharCount(input))
-	}, [input, ignoreCitation])
+	}, [input, ignoreCitation, autoSave])
+
+	useEffect(() => {
+		autoSave ? localStorage.setItem("input", input) : localStorage.removeItem("input")
+	}, [input, autoSave])
 
 	return (
 		<div className="flex h-[50vh] justify-center mx-4 mt-7">
@@ -23,8 +33,6 @@ const TextInput = () => {
 				value={input}
 				onChange={(e) => setInput(e.target.value)}
 			/>
-				
-			
 		</div>
 	)
 }
