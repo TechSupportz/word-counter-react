@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 * {
-	box-sizing: border-box;
+	@apply
+	box-border
+	dark:text-white
+}
+
+body{
+	@apply
+	bg-white dark:bg-blue-darker
 }
