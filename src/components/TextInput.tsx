@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react"
 import { updateWordCount } from "../app/slices/counter"
 import { updateCharCount } from "../app/slices/counter"
+import { useAppSelector } from "../hooks/useAppSelector"
 import { useAppDispatch } from "../hooks/useAppDispatch"
 
 const TextInput = () => {
 	const dispatch = useAppDispatch()
 
 	const [input, setInput] = useState("")
+	const ignoreCitation = useAppSelector((state) => state.counter.ignoreCitation)
 
 	useEffect(() => {
 		dispatch(updateWordCount(input))
 		dispatch(updateCharCount(input))
-	}, [input])
+	}, [input, ignoreCitation])
 
 	return (
 		<div className="flex h-[50vh] justify-center mx-4 mt-7">

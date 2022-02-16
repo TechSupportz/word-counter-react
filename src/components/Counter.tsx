@@ -18,7 +18,10 @@ const Counter = () => {
 				<p className="font-bold text-5xl">{charCount}</p>
 				<p className="font-semibold text-2xl">Chars</p>
 			</div>
-			<Options/>
+			<div className="justify-self-start col-span-2 lg:hidden">
+				<Options />
+			</div>
+			
 		</div>
 	)
 }
