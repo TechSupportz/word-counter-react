@@ -18,8 +18,8 @@ const App = () => {
 				<div className="h-[50vh] lg:h-full mx-4 mt-7 lg:mt-0 lg:col-span-4 lg:row-span-full lg:order-first">
 					<TextInput />
 				</div>
+			<a href="https://github.com/TechSupportz/word-counter-tsx" className="w-screen lg:w-fit py-2 text-center lg:text-left text-sm  underline text-blue-300 visited:text-blue-300 dark:text-slate-700/70 dark:visited:text-slate-700/70">Check out the github repository here</a>
 			</div>
-			<a href="https://github.com/TechSupportz/word-counter-tsx" className="w-screen lg:w-fit m-0 absolute bottom-2 lg:left-2 text-center lg:text-left text-sm  underline text-blue-300 visited:text-blue-300 dark:text-slate-700/70 dark:visited:text-slate-700/70">Check out the github repository here</a>
 		</>
 	)
 }
