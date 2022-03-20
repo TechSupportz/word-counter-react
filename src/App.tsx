@@ -3,8 +3,12 @@ import Counter from "./components/Counter"
 import TextInput from "./components/TextInput"
 import Options from "./components/Options"
 import Topbar from "./components/Topbar"
+import ReactGA from "react-ga4"
 
 const App = () => {
+	ReactGA.initialize("G-6LWT56DD2B")
+	ReactGA.send("pageview")
+
 	return (
 		<div className="flex-col space-y-10">
 			<Topbar />
