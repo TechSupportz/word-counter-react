@@ -6,9 +6,9 @@ import Topbar from "./components/Topbar"
 
 const App = () => {
 	return (
-		<>
+		<div className="flex-col space-y-10">
 			<Topbar />
-			<div className="grid h-[75vh] lg:grid-cols-6 lg:grid-rows-5 lg:gap-y-8 mt-10 lg:mt-16">
+			<div className="grid block minH-[80vh] lg:h-[72.5vh] lg:grid-cols-6 lg:grid-rows-5 lg:gap-y-8 mt-10 lg:mt-16">
 				<div className="lg:col-span-2 lg:row-span-3 h-full">
 					<Counter />
 				</div>
@@ -18,9 +18,25 @@ const App = () => {
 				<div className="h-[50vh] lg:h-full mx-4 mt-7 lg:mt-0 lg:col-span-4 lg:row-span-full lg:order-first">
 					<TextInput />
 				</div>
-			<a href="https://github.com/TechSupportz/word-counter-tsx" className="w-screen lg:w-fit py-2 lg:px-5 text-center lg:col-span-full lg:text-left lg:align-self-bottom text-sm  underline text-blue-300 visited:text-blue-300 dark:text-slate-700/70 dark:visited:text-slate-700/70">Check out the github repository here</a>
 			</div>
-		</>
+			<div className="flex space-x-3 justify-center mt-auto">
+				<a
+					href="https://www.privacypolicies.com/live/e45cc32d-d3d3-4d67-b874-18e9b7d2aa09"
+					target="_blank"
+					className="text-sm  lg:w-fit py-2 lg:px-5 text-center lg:text-left lg:align-self-bottom text-sm  underline text-blue-300 visited:text-blue-300 dark:text-slate-700/70 dark:visited:text-slate-700/70"
+				>
+					Privacy Policy
+				</a>
+
+				<a
+					href="https://github.com/TechSupportz/word-counter-tsx"
+					target="_blank"
+					className="text-sm lg:w-fit py-2 lg:px-5 text-center lg:text-left lg:align-self-bottom text-sm  underline text-blue-300 visited:text-blue-300 dark:text-slate-700/70 dark:visited:text-slate-700/70"
+				>
+					Check out the github repository here
+				</a>
+			</div>
+		</div>
 	)
 }
 

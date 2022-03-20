@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 * {
-	@apply
-	box-border
-	dark:text-white
+	@apply box-border
+	dark:text-white;
 }
 
-body{
-	@apply
-	bg-white dark:bg-blue-darker
+body {
+	
+	@apply bg-white dark:bg-blue-darker;
 }
