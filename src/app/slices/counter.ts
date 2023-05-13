@@ -19,7 +19,7 @@ export const CounterSlice = createSlice({
 	} as CounterState,
 	reducers: {
 		updateWordCount: (state, action: PayloadAction<string>) => {
-			state.ignoreCitation && (action.payload = action.payload.replace(/ *\([^)]*\) */g, ""))
+			state.ignoreCitation && (action.payload = action.payload.replaceAll(/ *\([^\)]*?,[^\)]*?\)/g, ""))
 
 			const wordArray = action.payload
 				.replace(/\n/g, " ")
@@ -29,7 +29,7 @@ export const CounterSlice = createSlice({
 			state.wordCount = wordArray.length
 		},
 		updateCharCount: (state, action: PayloadAction<string>) => {
-			state.ignoreCitation && (action.payload = action.payload.replace(/ *\([^)]*\) */g, ""))
+			state.ignoreCitation && (action.payload = action.payload.replaceAll(/ *\([^\)]*?,[^\)]*?\)/g, ""))
 
 			const charArray = action.payload
 				.replace(/\n/g, "")
